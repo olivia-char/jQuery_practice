@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQUERY!</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('h1').click(function(){
+				$('#intro').show();
+				$('h1').html('<span class="red">Welcome to my webpage</span>');
+			});
+
+			$('#intro').hide();
+			$('#intro').click(function(){
+				$('#intro').text('JQUERY is tons of fun! this is what makes a website interactive');
+			});
+
+			$('#pic').hide();
+			$('#button1').click(function(){
+				$('#pic').slideDown();
+			});
+
+			$('#button2').click(function(){
+				$('#pic').slideUp();
+			});
+			$('h2').click(function(){
+				$('h2').append('<i> will finish it!</i>');
+			});
+			$('h3').hide();
+			$('#house').click(function(){
+				$('h3').fadeIn("slow");
+				$('h3').fadeOut("slow");
+			});
+			$('#inner').click(function(){
+				$('#inner').before("Before I lived in Glen Ellen");
+				$('#inner').after("Now I want to move to Seattle");
+			});
+		});
+
+	</script>
+	<style>
+		.red{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Welcome to my webpage!</h1>
+	<p id ="intro">my name is olivia I have been teaching myself how to code for the last 2 years. Now time to get serious.</p>
+	<button id="button1">Click Here</button>
+	<button id="button2">Then Click here!</button>
+	<img id="pic" src="proflie.jpg" height="50">
+	<h2>If you click on this sentence append</h2>
+	<img id="house" src="house.png" height="100px">
+	<h3>I'm a ghost! ~(0 o 0)~</h3>
+	<p id="inner">I currently live in San Jose</p>
+</body>
+</html>
